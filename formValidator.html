@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Validation with jQuery</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style>
+		.error {
+			color: red;
+			font-size: 0.9em;
+			margin-top: 5px;
+		}
+
+		#passwordStrength {
+			margin-top: 10px;
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h2 class="mt-4 mb-4">Registration Form</h2>
+		<form id="registrationForm">
+			<div class="form-group">
+				<label for="username">Username:</label>
+				<input type="text" class="form-control" id="username" name="username" required>
+				<div class="error" id="usernameError"></div>
+			</div>
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" class="form-control" id="email" name="email" required>
+				<div class="error" id="emailError"></div>
+			</div>
+			<div class="form-group">
+				<label for="password">Password:</label>
+				<input type="password" class="form-control" id="password" name="password" required>
+				<div class="error" id="passwordError"></div>
+				<div id="passwordStrength"></div>
+			</div>
+			<div class="form-group">
+				<label for="confirmPassword">Confirm Password:</label>
+				<input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+					required>
+				<div class="error" id="confirmPasswordError"></div>
+			</div>
+			<button type="submit" class="btn btn-primary">Register</button>
+		</form>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="validation.js"></script>
+</body>
+
+</html>
